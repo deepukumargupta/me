@@ -45,7 +45,7 @@ $(document).ready(function () {
     }, 1500);
 
     $(".pbar4").animate({
-        width: "82%"
+        width: "85%"
     }, 1500);
     $(".pbar5").animate({
         width: "90%"
