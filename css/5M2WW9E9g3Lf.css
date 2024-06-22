@@ -135,6 +135,7 @@
 
     .logo:after {
         left: 20px;
+        visibility: hidden;
     }
 
     .logo.logo-left:after {
