@@ -19,19 +19,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['txt_email'];
     $message = $_POST['txt_message'];
 
-    // Validate and sanitize input (example)
     $name = htmlspecialchars($name);
     $email = filter_var($email, FILTER_SANITIZE_EMAIL);
     $message = htmlspecialchars($message);
 
-    // Insert data into MySQL database
     $sql = "INSERT INTO contact_messages (name, email, message) VALUES ('$name', '$email', '$message')";
 
     if ($conn->query($sql) === TRUE) {
-        // Data inserted successfully
-        // Additional actions like sending email can be added here
-
-        // Redirect with success message (if needed)
         header("Location: index.html?message=success");
         exit();
     } else {
